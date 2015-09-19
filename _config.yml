@@ -1,0 +1,24 @@
+display_name: Your Site's Name Here
+domainroot: http://micro.snook.pub/
+
+meta:
+  title: Your Site's Name Here
+  description: A description of your site. Relatively short is good. Use words
+    that appear in your site. Like template repository shortcut helper library
+    html sass bootstrap theme easy painless fun.
+  keywords:
+  fb_description:
+  fb_site_name:
+  fb_title:
+
+
+exclude:
+  - Gruntfile.js
+  - scss
+  - .ruby-version
+  - package.json"
+  - README.md
+  - node_modules
+  - bower_components
+  - .sass-cache
+  - CNAME

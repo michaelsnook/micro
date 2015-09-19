@@ -1,0 +1,39 @@
+$brand-primary: #660c2e;
+/*$brand-success: #00bc8c;
+$brand-info: #3498db;
+$brand-warning: #f39c12;
+$brand-danger: #e74c3c;*/
+
+$navbar-border-radius: 0;
+$navbar-inverse-color: $brand-primary;
+$navbar-inverse-bg: #fff;
+
+@import 'variables'; /* set as part of the bootswatch theme, darkly */
+@import 'bootstrap';
+@import 'darkly'; /* theme from bootswatch, pick any one you like! */
+
+
+.navbar-brand svg {
+  height: 45px;
+  margin-top: -11px;
+  path { fill: #660C2E; }
+}
+
+@media (max-width: 767px) {
+  .navbar-brand {
+    font-size: 16px;
+    svg { height: 20px; margin-top: 0; }
+  }
+}
+.navbar-brand+.navbar-brand { margin-left: 0; padding-left: 0; text-transform: uppercase; }
+.navbar.first { margin-bottom: 0 }
+.navbar.second { min-height: 0; }
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.navbar.first .navbar-header { float: none; }
+.navbar .navbar-collapse, .navbar .navbar-header {
+  text-align: center;
+}

@@ -1,0 +1,12 @@
+{% assign pages = site.pages | sort:"order"  %}
+{% for p in pages %}
+  {% if p.nav-text %}
+
+<li{% if page.name == p.name %} class="active"{% endif %}>
+  <a href="/{{ p.name }}">{{ p.nav-text }}</a>
+  {% if page.name == p.name %} <span class="sr-only">(current)</span>{% endif %}
+</li>
+
+  {% endif %}
+{% endfor %}
+<li><a href="#">Donate</a></li>
