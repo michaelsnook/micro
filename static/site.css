@@ -1,8 +1,15 @@
 @charset "UTF-8";
-/*$brand-success: #00bc8c;
-$brand-info: #3498db;
-$brand-warning: #f39c12;
-$brand-danger: #e74c3c;*/
+                             /*
+$brand-success:  #00bc8c;
+$brand-info:        #3498db;
+$brand-warning:     #f39c12;
+$brand-danger:      #e74c3c;
+$gray-base:         #000;
+$gray-darker:       lighten($gray-base, 13.5%);
+$gray-dark:         #303030;
+$gray:              #464545;
+$gray-light:        #999;
+$gray-lighter:      #ebebeb; */
 /* set as part of the bootswatch theme, darkly */
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -1257,7 +1264,7 @@ mark,
 .text-right {
   text-align: right; }
 
-.text-center {
+.text-center, footer {
   text-align: center; }
 
 .text-justify {
@@ -1275,7 +1282,7 @@ mark,
 .text-capitalize {
   text-transform: capitalize; }
 
-.text-muted {
+.text-muted, footer {
   color: #999; }
 
 .text-primary {
@@ -5012,7 +5019,7 @@ button.list-group-item-danger {
 .embed-responsive-4by3 {
   padding-bottom: 75%; }
 
-.well {
+.well, footer {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
@@ -5021,7 +5028,7 @@ button.list-group-item-danger {
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05); }
-  .well blockquote {
+  .well blockquote, footer blockquote {
     border-color: #ddd;
     border-color: rgba(0, 0, 0, 0.15); }
 
@@ -6010,7 +6017,7 @@ textarea {
     font-size: 10px;
     line-height: 10px; }
 
-.well {
+.well, footer {
   -webkit-box-shadow: none;
   box-shadow: none; }
 
@@ -6038,36 +6045,100 @@ a.list-group-item-danger.active:hover, a.list-group-item-danger.active:focus {
 /* theme from bootswatch, pick any one you like! */
 .navbar-brand svg {
   height: 45px;
-  margin-top: -11px; }
+  margin-top: -11px;
+  /* change this if your logo height changes */ }
   .navbar-brand svg path {
-    fill: #660C2E; }
+    fill: #660c2e; }
 
+.footer-brand svg {
+  height: 75px; }
+  .footer-brand svg path {
+    fill: #999; }
+
+footer {
+  margin: 0;
+  border-radius: 0; }
+  footer .copyright {
+    margin: 20px; }
+
+/* sticky footer code block */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 185px; }
+
+body {
+     /*
+The +50px provides some cushion, which then gets eaten up if the footer height
+increases on mobile. It looks fine (bc 50px is a lot on mobile), but it's not
+the cleanest approach, aside from avoiding JS.
+*/
+  margin-bottom: 235px; }
+
+html {
+  position: relative;
+  min-height: 100%; }
+
+/* end sticky footer */
 @media (max-width: 767px) {
   .navbar-brand {
     font-size: 16px; }
+    .navbar-brand.logo {
+      padding-right: 5px; }
     .navbar-brand svg {
       height: 20px;
       margin-top: 0; } }
-.navbar-brand + .navbar-brand {
+.navbar-brand.title {
   margin-left: 0;
   padding-left: 0;
   text-transform: uppercase; }
 
 .navbar.first {
   margin-bottom: 0; }
-
+  .navbar.first .navbar-header {
+    float: none; }
 .navbar.second {
   min-height: 0; }
-
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top; }
-
-.navbar.first .navbar-header {
-  float: none; }
-
 .navbar .navbar-collapse, .navbar .navbar-header {
   text-align: center; }
 
-/*# sourceMappingURL=styles.css.map */
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #660c2e; }
+
+.form-heading {
+  margin-top: 0; }
+
+.form-container {
+  margin-bottom: 50px; }
+
+/* affix sidebar code */
+/* This part will only work with standard grid layout. If you override that,
+you'll need to change these hardcoded widths. */
+@media (max-width: 991px) {
+  .container.content {
+    padding-bottom: 20px; }
+
+  .affix, .affix-top, .affix-bottom {
+    position: static; } }
+@media (min-width: 992px) {
+  .container.content {
+    padding-bottom: 50px; }
+
+  .affix {
+    top: 21px;
+    width: 374.156px; }
+
+  .affix-bottom {
+    position: absolute;
+    width: 374.156px; } }
+@media (min-width: 1200px) {
+  .affix, affix-bottom {
+    width: 457.5px; } }
+/* end of affix sidebar */
+
+/*# sourceMappingURL=site.css.map */

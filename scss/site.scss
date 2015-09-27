@@ -1,39 +1,121 @@
-$brand-primary: #660c2e;
-/*$brand-success: #00bc8c;
-$brand-info: #3498db;
-$brand-warning: #f39c12;
-$brand-danger: #e74c3c;*/
-
+$brand-primary:     #660c2e; /*
+$brand-success:  #00bc8c;
+$brand-info:        #3498db;
+$brand-warning:     #f39c12;
+$brand-danger:      #e74c3c;
+$gray-base:         #000;
+$gray-darker:       lighten($gray-base, 13.5%);
+$gray-dark:         #303030;
+$gray:              #464545;
+$gray-light:        #999;
+$gray-lighter:      #ebebeb; */
 $navbar-border-radius: 0;
 $navbar-inverse-color: $brand-primary;
 $navbar-inverse-bg: #fff;
-
+$footer-height: 185px;
 @import 'variables'; /* set as part of the bootswatch theme, darkly */
 @import 'bootstrap';
 @import 'darkly'; /* theme from bootswatch, pick any one you like! */
-
-
 .navbar-brand svg {
   height: 45px;
-  margin-top: -11px;
-  path { fill: #660C2E; }
+  margin-top: -11px; /* change this if your logo height changes */
+  path {
+    fill: $brand-primary;
+  }
 }
-
+.footer-brand svg {
+  height: 75px;
+  path {
+    fill: $gray-light;
+  }
+}
+footer {
+  @extend .well, .text-muted, .text-center;
+  margin: 0;
+  border-radius: 0;
+  .copyright {
+    margin: 20px;
+  }
+}
+/* sticky footer code block */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: $footer-height;
+}
+body { /*
+  The +50px provides some cushion, which then gets eaten up if the footer height
+  increases on mobile. It looks fine (bc 50px is a lot on mobile), but it's not
+  the cleanest approach, aside from avoiding JS.
+  */
+  margin-bottom: $footer-height + 50px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+/* end sticky footer */
 @media (max-width: 767px) {
   .navbar-brand {
     font-size: 16px;
-    svg { height: 20px; margin-top: 0; }
+    &.logo { padding-right: 5px; }
+    svg {
+      height: 20px;
+      margin-top: 0;
+    }
   }
 }
-.navbar-brand+.navbar-brand { margin-left: 0; padding-left: 0; text-transform: uppercase; }
-.navbar.first { margin-bottom: 0 }
-.navbar.second { min-height: 0; }
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
+.navbar-brand.title {
+  margin-left: 0;
+  padding-left: 0;
+  text-transform: uppercase;
 }
-.navbar.first .navbar-header { float: none; }
-.navbar .navbar-collapse, .navbar .navbar-header {
-  text-align: center;
+.navbar {
+  &.first {
+    margin-bottom: 0;
+    .navbar-header {
+      float: none;
+    }
+  }
+  &.second {
+    min-height: 0;
+  }
+  .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+  .navbar-collapse, .navbar-header {
+    text-align: center;
+  }
 }
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: $brand-primary;
+}
+.form-heading { margin-top: 0; }
+.form-container { margin-bottom: 50px; }
+/* affix sidebar code */
+/* This part will only work with standard grid layout. If you override that,
+you'll need to change these hardcoded widths. */
+@media (max-width: 991px) {
+  .container.content { padding-bottom: 20px; }
+  .affix, .affix-top, .affix-bottom { position: static; }
+}
+@media (min-width: 992px) {
+  .container.content { padding-bottom: 50px; }
+  .affix {
+    top: 21px;
+    width: 374.156px;
+  }
+  .affix-bottom {
+    position: absolute;
+    width: 374.156px;
+  }
+}
+@media (min-width: 1200px) {
+  .affix, affix-bottom {
+    width: 457.5px;
+  }
+}
+/* end of affix sidebar */

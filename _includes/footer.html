@@ -1,0 +1,39 @@
+<footer>
+  <div class="container">
+    <p><a class="footer-brand" href="/">{% include logo.svg %}</a></p>
+    <div class="buttons">
+      {% comment %} ===================================================
+      In the absence of a functioning url_scape filter, you can apply this:
+
+        | replace: ' ', '+' | replace: '!', '%21' | replace: "'", '%27'
+        | replace: '"', '%22' | replace: ':', '%3A' | replace: '/', '%2F'
+        | replace: '#', '%23' | replace: '@', '%40' | '&', '%26' | '$', '%24'
+
+      But modern browsers don't seem to need it, so for this example site,
+      I'm leaving it out because it's hideous. Only the tweet includes the '#'
+      replacement because it's actually needed. In a production environment
+      you'll probably be using a more sophisticated rendering engine that
+      includes the stock url_escape filter from Liquid.
+      ================================================ {% endcomment %}
+      <a class="btn btn-default" href="https://www.facebook.com/sharer/sharer.php?u={{ site.domainroot }}" target="_blank">
+        Share <i class="fa fa-facebook-f"></i>
+      </a>
+      <a class="btn btn-default" href="https://twitter.com/intent/tweet/?text={{ site.footer.twitter_message | replace: '#', '%23' }}" target="_blank">
+        Tweet <i class="fa fa-twitter"></i>
+      </a>
+      {% comment %}don't use target=>blank because external app{% endcomment %}
+      <a class="btn btn-default" href="mailto:?subject={{ site.footer.mailto_subject }}">
+        Email <i class="fa fa-pencil-square-o"></i>
+      </a>
+      <a class="btn btn-default" href="http://github.com/michaelsnook/micro/" target="_blank">
+        Fork / Clone <i class="fa fa-github"></i>
+      </a>
+
+    </div>
+
+    <p class="copyright">
+      &copy; {{ site.footer.copyright }}
+    </p>
+
+  </div>
+</footer>

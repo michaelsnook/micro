@@ -1,0 +1,35 @@
+<form class="form" method="POST" act="{{ site.forms.post_url }}">
+  <h2 class="form-heading">Sign my petition</h2>
+  {% if site.forms.combine_names %}
+  <p>
+    <label for="inputFullname" class="sr-only">Your name</label>
+    <input name="full_name" type="text" id="inputFullname" class="form-control" placeholder="Your name" autofocus>
+  </p>
+  {% else %}
+  <p>
+    <label for="inputFirstname" class="sr-only">First name</label>
+    <input name="first_name" type="text" id="inputFirstname" class="form-control" placeholder="First name" autofocus>
+  </p>
+  <p>
+    <label for="inputLastname" class="sr-only">Last name</label>
+    <input name="last_name" type="text" id="inputLastname" class="form-control" placeholder="Last name">
+  </p>
+  {% endif %}
+  <p>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+  </p>
+  <p>
+    <label for="inputPostal" class="sr-only">Postal code</label>
+    <input name="postal_code" type="text" id="inputPostal" class="form-control" placeholder="Postal code" required>
+  </p>
+
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
+  <p class="checkbox">
+    <label>
+      <input name="optin" type="checkbox" value="true" checked> I'd like to stay involved in this and other campaigns
+    </label>
+  </p>
+
+</form>

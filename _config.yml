@@ -1,6 +1,11 @@
 display_name: Your Site's Name Here
 domainroot: http://micro.snook.pub/
 
+forms:
+  post_url: /
+  combine_names: false
+  submit_text: sign here
+
 meta:
   title: Your Site's Name Here
   description: A description of your site. Relatively short is good. Use words
@@ -11,12 +16,16 @@ meta:
   fb_site_name:
   fb_title:
 
+footer:
+  copyright: 2015 Organization. All rights reserved. Authorised by Jane Directorstenson, 555 Boulevard Rd, Suite 555, Springfield ST.
+  mailto_subject: Here's a subject line about this campaign I'm supporting. Wee!
+  twitter_message: "Tweet tweet! Come check out this cooooool campaign. http://micro.snook.pub/ #microsite @michaelsnook"
 
 exclude:
   - Gruntfile.js
   - scss
   - .ruby-version
-  - package.json"
+  - package.json
   - README.md
   - node_modules
   - bower_components
