@@ -1,5 +1,6 @@
-$brand-primary:     #660c2e; /*
-$brand-success:  #00bc8c;
+$brand-primary:     #660c2e;
+$text-color:        #d8d8d8; /*
+$brand-success:     #00bc8c;
 $brand-info:        #3498db;
 $brand-warning:     #f39c12;
 $brand-danger:      #e74c3c;
@@ -119,3 +120,4 @@ you'll need to change these hardcoded widths. */
   }
 }
 /* end of affix sidebar */
+.progress.with-text { margin-bottom: 0; }

@@ -3,45 +3,72 @@ layout: default
 nav-text: Home
 order: 1
 title: Petition Appeal On Main Page!
+progress: 41.234%
+progress_text: 41,234 signatures to our goal of 100,000!
+petition_title: Sign Awesome Petition!
 ---
 <div class="container content">
 <div class="row">
   <div class="col-md-7 col-sm-12">
     <h1>{{ page.title }}</h1>
     <p>This is a sample microsite that includes all of my favorite little tricks.
-      It started out as an attempt to recreate the <a href="http://www.nobusinessinabuse.org">
-      No Business In Abuse</a> site by GetUp, hence the logo, and a few of the design
-      elements like the maroon primary color and the dual navbar.</p>
-
+      It started out as an attempt to recreate the <em>No Business In Abuse</em>
+      site[<a href="http://www.nobusinessinabuse.org">1</a>] by GetUp, hence the logo, and a few of the design
+      elements like the maroon primary color and the centered dual navbar.</p>
     <blockquote>But what it became is something much more. It became a model microsite
       built on Jekyll and Bootstrap SASS, plus the file structure I like, the
       floating sidebar form, the meta tags, and even some best-practice
       copy/language here and there.</blockquote>
+    <p class="text-success"><strong>Sign the form
+      <span class="visible-lg-inline visible-md-inline">on the right</span>
+      <span class="visible-sm-inline visible-xs-inline">below</span>
+      to add your voice. We'll deliver every petition to Congress so your voice
+      is heard!
+      <span class="visible-lg-inline visible-md-inline">&gt;&gt;</span></strong>
+    </p>
 
-    <div class="alert alert-success">Sign the form <span class="visible-lg-inline visible-md-inline">to the right</span>
-      <span class="visible-sm-inline visible-xs-inline">below</span> to add your voice.
-      We'll make sure to deliver every petition to Congress so your voice is heard.</div>
+    <p>To make this your own microsite you'll need to provide your own actual
+      content for your campaign, apply branding in <code>scss/site.scss</code> or with
+      a new Bootswatch theme, make the form work with your back-end, and update
+      config/CNAME. You still need to build a site, but all the pieces are laid
+      out for you.</p>
+    <p>The Jekyll/Liquid/Bootstrap/SASS setup should be easy to adapt to whatever
+      framework you're using in production. (In that sense, refraining from using
+      a true asset pipeline is actually sort of a feature; I'm just using
+      <code>sass --watch</code> here, and cat'ing the JS with Jekyll includes.)</p>
 
-    <p>Basically all you need to do to make this your own microsite is update the
-      CNAME, edit the html files in the root directory, update the config file and
-      <code>site.scss</code>, and deploy. </p>
-    <p>Next I'll probably add a floating "sign" button for the mobile styles
-      that will zoom the viewer down to the form and drop their cursor into the
-      name input.</p>
-    <p>You'll also get page-specific settings (via yaml frontmatter) to decide
-      whether you want acquisition lightboxes, along with the cookie JS to
-      determine when it's appropriate to show them.</p>
-    <p>I should probably make that "donate" link into more of a button and make
-      it do something, like pop up a donate modal or take you to some page whose
-      value is set in <code>_settings.yml</code></p>
-    <p>There's loads more to do, I mostly just intend for this to be a repository
-      for all the microsite best-practices I can think of, and done in the most
-      re-useable ways I can possibly think of. </p>
-    <p>Right now the site uses no custom Javascript (just than jquery and bootstrap.js)
-      and only about 70 lines of SASS on top of the bootstrap and bootswatch
-      includes. Keeping these sorts of interventions as rare as possible should
-      make this a useful repo for folks to copy, even if your end up replacing
-      the Liquid/Jekyll templates entirely, or ripping the HTML and CSS as compiled.</p>
+    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel panel-default">
+      <div class="panel-heading" role="tab" id="headingOne">
+        <h4 class="panel-title">
+          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            Click here to read the full text of the letter
+          </a>
+        </h4>
+      </div>
+      <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+        <div class="panel-body">
+          <p>Next I'll probably add a floating "sign" button for the mobile styles
+            that will zoom the viewer down to the form and drop their cursor into the
+            name input.</p>
+          <p>You'll also get page-specific settings (via yaml frontmatter) to decide
+            whether you want acquisition lightboxes, along with the cookie JS to
+            determine when it's appropriate to show them.</p>
+          <p>I should probably make that "donate" link into more of a button and make
+            it do something, like pop up a donate modal or take you to some page whose
+            value is set in <code>_settings.yml</code>.</p>
+          <p>There's loads more to do, I mostly just intend for this to be a repository
+            for all the microsite best-practices I can think of, and done in the most
+            re-useable way I can. </p>
+          <p>Right now the site uses no custom Javascript (just jquery and bootstrap.js)
+            and only about 70 lines of SASS on top of the bootstrap and bootswatch
+            includes. Keeping these sorts of interventions as rare as possible should
+            make this a useful repo for folks to copy, even if your end up replacing
+            the Liquid/Jekyll templates entirely, or ripping the HTML and CSS as compiled.</p>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 
   <div class="col-md-5 col-sm-12 affix-outer">

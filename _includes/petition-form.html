@@ -1,5 +1,12 @@
 <form class="form" method="POST" act="{{ site.forms.post_url }}">
-  <h2 class="form-heading">Sign my petition</h2>
+  <h2 class="form-heading text-center">{{ page.petition_title }}</h2>
+  {% if page.progress %}
+  <div class="progress with-text">
+    <div class="progress-bar progress-bar-primary" style="width: {{ page.progress }}"></div>
+  </div>
+  <p class="text-primary text-center">{{ page.progress_text }}</p>
+  {% endif %}
+
   {% if site.forms.combine_names %}
   <p>
     <label for="inputFullname" class="sr-only">Your name</label>
@@ -15,6 +22,7 @@
     <input name="last_name" type="text" id="inputLastname" class="form-control" placeholder="Last name">
   </p>
   {% endif %}
+
   <p>
     <label for="inputEmail" class="sr-only">Email address</label>
     <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
