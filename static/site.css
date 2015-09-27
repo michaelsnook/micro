@@ -6137,7 +6137,7 @@ you'll need to change these hardcoded widths. */
     position: absolute;
     width: 374.156px; } }
 @media (min-width: 1200px) {
-  .affix, affix-bottom {
+  .affix, .affix-bottom {
     width: 457.5px; } }
 /* end of affix sidebar */
 
