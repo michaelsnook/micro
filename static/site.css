@@ -6061,26 +6061,6 @@ footer {
   footer .copyright {
     margin: 20px; }
 
-/* sticky footer code block */
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  min-height: 185px; }
-
-body {
-     /*
-The +50px provides some cushion, which then gets eaten up if the footer height
-increases on mobile. It looks fine (bc 50px is a lot on mobile), but it's not
-the cleanest approach, aside from avoiding JS.
-*/
-  margin-bottom: 235px; }
-
-html {
-  position: relative;
-  min-height: 100%; }
-
-/* end sticky footer */
 @media (max-width: 767px) {
   .navbar-brand {
     font-size: 16px; }
@@ -6116,9 +6096,7 @@ html {
 .form-container {
   margin-bottom: 50px; }
 
-/* affix sidebar code */
-/* This part will only work with standard grid layout. If you override that,
-you'll need to change these hardcoded widths. */
+/* affix sidebar code. will break if you change grid sizes. */
 @media (max-width: 991px) {
   .container.content {
     padding-bottom: 20px; }
