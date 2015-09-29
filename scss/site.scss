@@ -17,29 +17,36 @@ $footer-height: 185px;
 @import 'variables'; /* set as part of the bootswatch theme, darkly */
 @import 'bootstrap';
 @import 'darkly'; /* theme from bootswatch, pick any one you like! */
-.navbar-brand svg {
-  height: 45px;
-  margin-top: -11px; /* change this if your logo height changes */
-  path {
-    fill: $brand-primary;
+
+/* navbar */
+.navbar {
+  text-align: center;
+  &.first {
+    margin-bottom: 0;
+    .navbar-header { float: none; }
+  }
+  &.second { min-height: 0; }
+  .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
   }
 }
-.footer-brand svg {
-  height: 75px;
-  path {
-    fill: $gray-light;
-  }
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: $brand-primary;
 }
-footer {
-  @extend .well, .text-muted, .text-center;
-  margin: 0;
-  border-radius: 0;
-  .copyright {
-    margin: 20px;
+.navbar-brand {
+  &.title {
+    margin-left: 0;
+    padding-left: 0;
+    text-transform: uppercase;
   }
-}
-@media (max-width: 767px) {
-  .navbar-brand {
+  svg {
+    height: 45px;
+    margin-top: -11px; /* change this if your logo height changes */
+    path { fill: $brand-primary; }
+  }
+  @media (max-width: 767px) {
     font-size: 16px;
     &.logo { padding-right: 5px; }
     svg {
@@ -48,35 +55,18 @@ footer {
     }
   }
 }
-.navbar-brand.title {
-  margin-left: 0;
-  padding-left: 0;
-  text-transform: uppercase;
+/* footer */
+footer {
+  @extend .well, .text-muted, .text-center;
+  margin: 0;
+  border-radius: 0;
+  .copyright { margin: 20px; }
+  a.btn { margin: 0.5em; }
 }
-.navbar {
-  &.first {
-    margin-bottom: 0;
-    .navbar-header {
-      float: none;
-    }
-  }
-  &.second {
-    min-height: 0;
-  }
-  .navbar-nav {
-    display: inline-block;
-    float: none;
-    vertical-align: top;
-  }
-  .navbar-collapse, .navbar-header {
-    text-align: center;
-  }
+.footer-brand svg {
+  height: 75px;
+  path { fill: $gray-light; }
 }
-.navbar-inverse .navbar-toggle .icon-bar {
-  background-color: $brand-primary;
-}
-.form-heading { margin-top: 0; }
-.form-container { margin-bottom: 50px; }
 /* affix sidebar code. will break if you change grid sizes. */
 @media (max-width: 991px) {
   .container.content { padding-bottom: 20px; }
@@ -98,5 +88,7 @@ footer {
     width: 457.5px;
   }
 }
-/* end of affix sidebar */
+/* form */
+.form-heading { margin-top: 0; }
+.form-container { margin-bottom: 50px; }
 .progress.with-text { margin-bottom: 0; }
