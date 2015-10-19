@@ -1,0 +1,21 @@
+.footer-brand svg {
+  height: 75px;
+  path { fill: $gray-light; }
+}
+/* navbar */
+
+.navbar-brand {
+  svg {
+    height: 45px;
+    margin-top: -11px; /* change this if your logo height changes */
+    path { fill: $brand-primary; }
+  }
+  @media (max-width: 767px) {
+    font-size: 16px;
+    &.logo { padding-right: 5px; }
+    svg {
+      height: 20px;
+      margin-top: 0;
+    }
+  }
+}
