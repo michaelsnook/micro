@@ -5,6 +5,7 @@ forms:
   post_url: /
   combine_names: false
   submit_text: sign here
+  labels: true
 
 meta:
   title: Your Site's Name Here

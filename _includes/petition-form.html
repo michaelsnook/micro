@@ -9,27 +9,27 @@
 
   {% if site.forms.combine_names %}
   <p>
-    <label for="inputFullname" class="sr-only">Your name</label>
-    <input name="full_name" type="text" id="inputFullname" class="form-control" placeholder="Your name" autofocus>
+    <label for="inputFullname" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>Your name</label>
+    <input name="full_name" type="text" id="inputFullname" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Your name"{%endif%} autofocus>
   </p>
   {% else %}
   <p>
-    <label for="inputFirstname" class="sr-only">First name</label>
-    <input name="first_name" type="text" id="inputFirstname" class="form-control" placeholder="First name" autofocus>
+    <label for="inputFirstname" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>First name</label>
+    <input name="first_name" type="text" id="inputFirstname" class="form-control" {% if site.forms.labels %}{%else%}placeholder="First name"{%endif%} autofocus>
   </p>
   <p>
-    <label for="inputLastname" class="sr-only">Last name</label>
-    <input name="last_name" type="text" id="inputLastname" class="form-control" placeholder="Last name">
+    <label for="inputLastname" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>Last name</label>
+    <input name="last_name" type="text" id="inputLastname" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Last name"{%endif%}>
   </p>
   {% endif %}
 
   <p>
-    <label for="inputEmail" class="sr-only">Email address</label>
-    <input name="email" type="email" id="inputEmail" class="form-control" placeholder="Email address" required>
+    <label for="inputEmail" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>Email address</label>
+    <input name="email" type="email" id="inputEmail" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Email address"{%endif%} required>
   </p>
   <p>
-    <label for="inputPostal" class="sr-only">Postal code</label>
-    <input name="postal_code" type="text" id="inputPostal" class="form-control" placeholder="Postal code" required>
+    <label for="inputPostal" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>Postal code</label>
+    <input name="postal_code" type="text" id="inputPostal" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Postal code"{%endif%} required>
   </p>
 
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
