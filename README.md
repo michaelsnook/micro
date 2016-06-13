@@ -32,9 +32,4 @@ declare these at the top of `site.scss`.
 For reasons, I chose to use an inline for a logo in a few places. This means that
 `static/images/logo.svg` actually just says `{% include logo.svg %}`. This is probably not a pattern
 you'll repeat with your own microsite, so it was kind of silly for me to do it
-in what was meant to be a template for future work. 
-
-## JavaScript
-
-Right now the javascript is cat'ed using Jekyll `include` directives instead of
-with some more intelligent uglification. This is silly and should be changed.
+in what was meant to be a template for future work.
