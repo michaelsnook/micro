@@ -22,6 +22,9 @@ footer:
   mailto_subject: Here's a subject line about this campaign I'm supporting. Wee!
   twitter_message: "Tweet tweet! Come check out this cooooool campaign. http://micro.snook.pub/ #microsite @michaelsnook"
 
+sass:
+  sass_dir: scss
+
 exclude:
   - Gruntfile.js
   - scss

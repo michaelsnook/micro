@@ -1,8 +1,12 @@
+---
+---
+
 $navbar-border-radius: 0;
 $navbar-inverse-bg: #fff;
 $footer-height: 185px;
+
 @import 'variables'; /* set as part of the bootswatch theme, darkly */
 @import 'bootstrap';
 @import 'darkly'; /* theme from bootswatch, pick any one you like! */
 @import 'layout';
-@import 'theme';
+@import 'site-theme';
