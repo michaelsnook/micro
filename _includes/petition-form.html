@@ -32,7 +32,7 @@
     <input name="postal_code" type="text" id="inputPostal" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Postal code"{%endif%} required>
   </p>
 
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">{{ site.forms.submit_text }}</button>
 
   <p class="checkbox">
     <label>

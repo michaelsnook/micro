@@ -4,8 +4,8 @@ domainroot: http://micro.snook.pub/
 forms:
   post_url: /
   combine_names: false
-  submit_text: sign here
-  labels: true
+  submit_text: DO THE SIGN
+  labels: true #false for placeholders
 
 meta:
   title: Your Site's Name Here
