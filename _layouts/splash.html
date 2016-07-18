@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>{{ site.meta.title }}</title>
+    <title>{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ site.meta.title }}{% endif %}</title>
 
     <meta name="title" content="{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ site.meta.title }}{% endif %}" />
     <meta name="description" content="{% if page.meta.description %}{{ page.meta.description }}{% else %}{{ site.meta.description }}{% endif %}" />
