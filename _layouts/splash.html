@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>{{ site.meta.title }}</title>
+
+    <meta name="title" content="{% if page.meta.title %}{{ page.meta.title }}{% else %}{{ site.meta.title }}{% endif %}" />
+    <meta name="description" content="{% if page.meta.description %}{{ page.meta.description }}{% else %}{{ site.meta.description }}{% endif %}" />
+    <meta name="keywords" content="{% if page.meta.keywords %}{{ page.meta.keywords }}{% else %}{{ site.meta.keywords }}{% endif %}" />
+    <meta property="og:title" content="{% if page.meta.fb_title %}{{ page.meta.fb_title }}{% else %}{{ site.meta.fb_title }}{% endif %}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="{% if page.meta.fb_site_name %}{{ page.meta.fb_site_name }}{% else %}{{ site.meta.fb_site_name }}{% endif %}"/>
+    <meta property="og:description" content="{% if page.meta.fb_description %}{{ page.meta.fb_description }}{% else %}{{ site.meta.fb_description }}{% endif %}" />
+    <meta property="og:url" content="{{ site.domainroot }}" />
+    <meta property="og:image" content="{{ site.domainroot }}static/splash.jpg"/>
+
+    <link rel="image_src" href="/static/images/splash.jpg" />
+    <link rel="stylesheet" href="/static/stylesheets/site.css" type="text/css" />
+    <!--link rel="shortcut icon" href="/static/favicon.png" /-->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+    body {
+      padding-top: 10vw;
+      padding-bottom: 10vw;
+      background: url(static/images/splash.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
+    .form { margin-top: 4vw; }
+    .well {
+      background-color: rgba(47,47,47,0.5);
+      text-shadow: 2px 2px 8px #000000;
+    }
+    </style>
+
+  </head>
+  <body>
+
+{{ content }}
+
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+      integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+      crossorigin="anonymous"></script>
+
+  </body>
+</html>

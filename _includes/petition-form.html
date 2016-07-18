@@ -6,34 +6,34 @@
   </div>
   <p class="text-primary text-center">{{ page.progress_text }}</p>
   {% endif %}
-
+  {% if page.forms.hide_name %}{% else %}
   {% if site.forms.combine_names %}
   <p>
-    <label for="inputFullname" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>Your name</label>
-    <input name="full_name" type="text" id="inputFullname" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Your name"{%endif%} autofocus>
+    <label for="inputFullname" {% unless page.forms.labels %}class="sr-only"{% endunless%}>Your name</label>
+    <input name="full_name" type="text" id="inputFullname" class="form-control" {% unless page.forms.labels %}placeholder="Your name"{% endunless %} autofocus>
   </p>
   {% else %}
   <p>
-    <label for="inputFirstname" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>First name</label>
-    <input name="first_name" type="text" id="inputFirstname" class="form-control" {% if site.forms.labels %}{%else%}placeholder="First name"{%endif%} autofocus>
+    <label for="inputFirstname" {% unless page.forms.labels %}class="sr-only"{% endunless%}>First name</label>
+    <input name="first_name" type="text" id="inputFirstname" class="form-control" {% unless page.forms.labels %}placeholder="First name"{% endunless %} autofocus>
   </p>
   <p>
-    <label for="inputLastname" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>Last name</label>
-    <input name="last_name" type="text" id="inputLastname" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Last name"{%endif%}>
+    <label for="inputLastname" {% unless page.forms.labels %}class="sr-only"{% endunless %}>Last name</label>
+    <input name="last_name" type="text" id="inputLastname" class="form-control" {% unless page.forms.labels %}placeholder="Last name"{% endunless %}>
   </p>
   {% endif %}
-
+  {% endif %}
   <p>
-    <label for="inputEmail" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>Email address</label>
-    <input name="email" type="email" id="inputEmail" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Email address"{%endif%} required>
+    <label for="inputEmail" {% unless page.forms.labels %}class="sr-only"{% endunless%}>Email address</label>
+    <input name="email" type="email" id="inputEmail" class="form-control" {% unless page.forms.labels %}placeholder="Email address"{% endunless %} required>
   </p>
   <p>
-    <label for="inputPostal" {% if site.forms.labels %}{%else%}class="sr-only"{%endif%}>Postal code</label>
-    <input name="postal_code" type="text" id="inputPostal" class="form-control" {% if site.forms.labels %}{%else%}placeholder="Postal code"{%endif%} required>
+    <label for="inputPostal" {% unless page.forms.labels %}class="sr-only"{% endunless %}>Postal code</label>
+    <input name="postal_code" type="text" id="inputPostal" class="form-control" {% unless page.forms.labels %}placeholder="Postal code"{% endunless %} required>
   </p>
-
-  <button class="btn btn-lg btn-primary btn-block" type="submit">{{ site.forms.submit_text }}</button>
-
+  <p class="text-center">
+    <button class="btn btn-primary{% unless page.forms.small_button %} btn-lg btn-block{% endunless %}" type="submit">{% if page.forms.submit_text %}{{ page.forms.submit_text}}{% else %}{{ site.forms.submit_text }}{% endif %}</button>
+  </p>
   <p class="checkbox">
     <label>
       <input name="optin" type="checkbox" value="true" checked> I'd like to stay involved in this and other campaigns
